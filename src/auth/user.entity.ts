@@ -1,13 +1,13 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
 
 @Entity()
-// @Unique(['username'])
+@Unique(['username'])
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    // @Column()
-    @Column({name: "username", unique: true})
+    @Column()
+    //@Column({name: "username", unique: true})
     username: string;
 
     @Column()
